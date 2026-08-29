@@ -1,5 +1,4 @@
 #include <Servo.h>
-
 const int trigPin = 10;
 const int echoPin = 11;
 long duration;
