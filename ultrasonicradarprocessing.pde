@@ -6,10 +6,7 @@ String data = "";
 int iAngle = 0;
 int iDistance = 0;
 
-// Store latest detected distance for every angle
 float[] detectedDistance = new float[181];
-
-// Used to fade old detections
 float[] detectionAlpha = new float[181];
 
 void setup() {
@@ -32,7 +29,6 @@ void draw() {
   drawSweep();
   drawInfo();
 
-  // Slowly fade previous detections
   for (int i = 0; i <= 180; i++) {
     if (detectionAlpha[i] > 0) {
       detectionAlpha[i] -= 2;
